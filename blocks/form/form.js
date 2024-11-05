@@ -79,6 +79,7 @@ async function handleSubmit(form) {
 }
 
 export default async function decorate(block) {
+  console.log("Line 1");
   const links = [...block.querySelectorAll('a')].map((a) => a.href);
   const formLink = links.find((link) => link.startsWith(window.location.origin) && link.endsWith('.json'));
   const submitLink = links.find((link) => link !== formLink);
